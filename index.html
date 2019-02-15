@@ -11,41 +11,7 @@
     <meta property="og:url" content="https://bunkers.co/" />
     <meta property="og:image" content="https://i.imgur.com/1V5vkWM.png" />
     <link href="/static/css/main.a3e8de42.css" rel="stylesheet">
-    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.12/js/adal.min.js"></script>
-<script>
-  var ADAL = new AuthenticationContext({
-      instance: 'https://login.microsoftonline.com/',
-      tenant: 'common', //COMMON OR YOUR TENANT ID
-
-      clientId: 'd0501122-1f52-43d3-9ede-7e0236feb252', //This is your client ID
-      redirectUri: 'https://bunkers.co/Thank-You.html', //This is your redirect URI
-
-      callback: userSignedIn,
-      popUp: true
-  });
-
-  function signIn() {
-      ADAL.login();
-  }
-
-  function userSignedIn(err, token) {
-      console.log('userSignedIn called');
-      if (!err) {
-          console.log("token: " + token);
-          showWelcomeMessage();
-      }
-      else {
-          console.error("error: " + err);
-      }
-  }
-
-  function showWelcomeMessage() {
-      var user = ADAL.getCachedUser();
-      var divWelcome = document.getElementById('WelcomeMessage');
-      divWelcome.innerHTML = "Welcome " + user.profile.name;
-  }
-
-</script> 
+    
 </head>
 
 <body>
