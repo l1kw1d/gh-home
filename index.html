@@ -40,6 +40,7 @@
       divWelcome.innerHTML = "Welcome " + user.profile.name;	
   }	
  </script>
+<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
 <script>
 (function(f, a, t, h, o, m){
 	a[h]=a[h]||function(){
@@ -49,10 +50,11 @@
 	m=f.getElementsByTagName('script')[0];
 	o.async=1; o.src=t; o.id='fathom-script';
 	m.parentNode.insertBefore(o,m)
-})(document, window, '//pve.bunkers.co:3333/tracker.js', 'fathom');
+})(document, window, '//77eade17.ngrok.io/tracker.js', 'fathom');
 fathom('set', 'siteId', 'EOVGR');
 fathom('trackPageview');
 </script>
+<!-- / Fathom -->
 </head>
 
 <body>
